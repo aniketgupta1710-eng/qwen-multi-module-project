@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant_research_platform"
+version = "0.1.0"
+description = "A quantitative strategy validation and backtesting research platform"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "PySide6",
+    "pandas",
+    "numpy",
+    "scipy",
+    "pandas-ta",
+    "pyqtgraph",
+    "xlsxwriter",
+    "openpyxl",
+    "yfinance"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[project.scripts]
+quant_app = "app.main:main"
